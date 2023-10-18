@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k6-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: k6-executor
+  template:
+    metadata:
+      labels:
+        app: k6-executor
+    spec:
+      containers:
+      - name: k6-executor
+        image: joaopaulopmedeiros/k6-executor:latest
+        resources:
+          limits:
+            cpu: "0.5" 
+            memory: "512Mi" 
+          requests:
+            cpu: "0.1"
+            memory: "128Mi" 

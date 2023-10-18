@@ -15,5 +15,5 @@ git clone https://github.com/joaopaulopmedeiros/k6-load-testing.git
 
 ## How to run
 ```
-./start.sh
+./run.sh
 ```
