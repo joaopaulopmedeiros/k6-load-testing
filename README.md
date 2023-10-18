@@ -8,8 +8,6 @@
   <em>A k6 proof of concept</em>
 </p>
 
-<hr>
-
 ## How to install
 ```
 git clone https://github.com/joaopaulopmedeiros/k6-load-testing.git
