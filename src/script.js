@@ -1,4 +1,3 @@
-// example rampage
 import http from 'k6/http';
 import { check, sleep } from 'k6';
 import { Kubernetes } from 'k6/x/kubernetes';
