@@ -1,12 +1,10 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: batch/v1
+kind: Job
 metadata:
   name: k6-executor
 spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: k6-executor
+  completions: 3 
+  parallelism: 3 
   template:
     metadata:
       labels:
@@ -22,3 +20,4 @@ spec:
           requests:
             cpu: "0.1"
             memory: "128Mi" 
+      restartPolicy: Never   
